@@ -376,7 +376,7 @@ public class HomePage {
                     frame,
                     "Booking Confirmed!\n\n"
                     + "Booking ID: " + newBooking.getBookingID()
-                    + "\nSeat Class: " + newBooking.getClass()
+                    + "\nSeat Class: " + newBooking.getSeatClass()
                     + "\nDestination: " + destination
             );
 
