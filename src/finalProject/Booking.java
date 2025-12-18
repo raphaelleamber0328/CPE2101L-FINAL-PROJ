@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
-public class Booking implements Serializable {
+public abstract class Booking implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -73,7 +73,7 @@ public class Booking implements Serializable {
     }
 
     // Runtime behavior depends on current date (Polymorphism)
-    public String getBookingType() {
+    public abstract String getBookingType() {
         return travelDate.after(new Date()) ? "Upcoming" : "Past";
     }
 }
