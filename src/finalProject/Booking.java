@@ -77,6 +77,10 @@ public class Booking implements Serializable {
         return travelDate.after(new Date()) ? "Upcoming" : "Past";
     }
 }
+	public String getSeatClass() {
+		return null;
+	}
+}
 
 /*
  * ===================== ABSTRACTION =====================
