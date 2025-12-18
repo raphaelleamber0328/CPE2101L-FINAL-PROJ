@@ -1,4 +1,4 @@
-package finalProj;
+package finalProject;
 
 import java.awt.Color;
 import java.awt.Font;

@@ -34,11 +34,25 @@ public class User implements Serializable {
     }
 
     // Getters provide controlled access (Encapsulation)
-    public String getPassword() { return password; }
-    public String getFullName() { return fullName; }
-    public String getEmail() { return email; }
-    public String getPhoneNumber() { return phoneNumber; }
-    public int getAge() { return age; }
+    public String getPassword() { 
+    	return password; 
+    }
+    
+    public String getFullName() { 
+    	return fullName; 
+    }
+    
+    public String getEmail() { 
+    return email; 
+    }
+    
+    public String getPhoneNumber() { 
+    	return phoneNumber; 
+    }
+    
+    public int getAge() { 
+    	return age; 
+    }
 
     public ArrayList<Booking> getBookingHistory() {
         return bookingHistory;

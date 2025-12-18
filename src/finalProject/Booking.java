@@ -38,12 +38,28 @@ public class Booking implements Serializable {
     }
 
     // Getter methods enforce encapsulation
-    public String getBookingID() { return bookingID; }
-    public String getDestinationCity() { return destinationCity; }
-    public String getFlightDetails() { return flightDetails; }
-    public Date getDateBooked() { return dateBooked; }
-    public Date getTravelDate() { return travelDate; }
-    public String getStatus() { return status; }
+    public String getBookingID() { 
+    	return bookingID; 
+    }
+    
+    public String getDestinationCity() { 
+    	return destinationCity; 
+    }
+    
+    public String getFlightDetails() { 
+    	return flightDetails; 
+    }
+    public Date getDateBooked() { 
+    	return dateBooked; 
+    }
+    
+    public Date getTravelDate() { 
+    	return travelDate; 
+    }
+    
+    public String getStatus() { 
+    	return status; 
+    }
 
     // Business rule for cancellation
     public boolean cancelBooking() {

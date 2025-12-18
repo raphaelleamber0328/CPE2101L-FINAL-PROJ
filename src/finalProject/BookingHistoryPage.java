@@ -1,4 +1,4 @@
-package finalProj;
+package finalProject;
 
 import java.awt.*;
 import java.text.SimpleDateFormat;
