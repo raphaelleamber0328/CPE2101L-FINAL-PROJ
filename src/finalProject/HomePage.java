@@ -6,7 +6,6 @@ import java.util.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
-import finalProject.User;
 
 public class HomePage {
 
