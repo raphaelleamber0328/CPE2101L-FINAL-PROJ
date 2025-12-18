@@ -141,7 +141,7 @@ public class LoginAndSignUp {
                 JOptionPane.showMessageDialog(frame, "Login Successful! Welcome, " + loggedInUser.getFullName());
                 
       
-                new HomePageProfile(loggedInUser).setVisible(true); 
+                new HomePage(loggedInUser).setVisible(true); 
                 frame.dispose();
             } else {
                 JOptionPane.showMessageDialog(frame, "Invalid email or password.");

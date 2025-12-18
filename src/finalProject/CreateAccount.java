@@ -212,7 +212,7 @@ public class CreateAccount {
             JOptionPane.showMessageDialog(frame, "Account Created Successfully!");
 
             frame.dispose();
-            new HomePageProfile(newUser).setVisible(true);
+            new HomePage(newUser).setVisible(true);
         });
     }
 
