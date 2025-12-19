@@ -74,6 +74,5 @@ public abstract class Booking implements Serializable {
         return travelDate.after(new Date()) ? "Upcoming" : "Past";
     }
 
-    // abstraction
-    public abstract String getSeatClass();
+    public String getSeatClass();
 }
