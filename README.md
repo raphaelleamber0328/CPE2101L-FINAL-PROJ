@@ -1,6 +1,7 @@
 ## Introduction 
 
 This project is a local travel booking system designed to allow users to book domestic flights from Cebu to different destinations within the Philippines. The system provides essential features such as creating an account, flight searching, booking confirmation, and booking history management.
+
 The application is implemented using Java with Object-Oriented Programming (OOP) principles and includes a Graphical User Interface (GUI) developed using Java Swing. The system ensures data organization, code reusability, and maintainability by applying abstraction, encapsulation, inheritance, and polymorphism. This project demonstrates how object-oriented concepts can be used to model real-world travel booking scenarios effectively.
 
 
