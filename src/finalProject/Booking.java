@@ -16,14 +16,13 @@ public abstract class Booking implements Serializable {
     private Date travelDate;
     private String status;
 
-    // Constants improve abstraction
     public static final String CONFIRMED = "Confirmed";
     public static final String CANCELED = "Canceled";
 
+    // Constructor
     public Booking(User bookedBy, String destinationCity,
                    String flightDetails, Date travelDate) {
 
-        // Automatic ID generation hides implementation detail
         this.bookingID = UUID.randomUUID()
                 .toString()
                 .substring(0, 8)
@@ -37,66 +36,44 @@ public abstract class Booking implements Serializable {
         this.status = CONFIRMED;
     }
 
-    // Getter methods enforce encapsulation
-    public String getBookingID() { 
-    	return bookingID; 
-    }
-    
-    public String getDestinationCity() { 
-    	return destinationCity; 
-    }
-    
-    public String getFlightDetails() { 
-    	return flightDetails; 
-    }
-    public Date getDateBooked() { 
-    	return dateBooked; 
-    }
-    
-    public Date getTravelDate() { 
-    	return travelDate; 
-    }
-    
-    public String getStatus() { 
-    	return status; 
+    //getters
+    public String getBookingID() {
+        return bookingID;
     }
 
-    // Business rule for cancellation
+    public String getDestinationCity() {
+        return destinationCity;
+    }
+
+    public String getFlightDetails() {
+        return flightDetails;
+    }
+
+    public Date getDateBooked() {
+        return dateBooked;
+    }
+
+    public Date getTravelDate() {
+        return travelDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    
     public boolean cancelBooking() {
-        if (this.status.equals(CONFIRMED)) {
-            if (travelDate.after(new Date())) {
-                this.status = CANCELED;
-                return true;
-            }
+        if (status.equals(CONFIRMED) && travelDate.after(new Date())) {
+            status = CANCELED;
+            return true;
         }
         return false;
     }
 
-    // Runtime behavior depends on current date (Polymorphism)
-    public abstract String getBookingType() {
+    public String getBookingType() {
         return travelDate.after(new Date()) ? "Upcoming" : "Past";
     }
-}
-	public abstract String getSeatClass() {
-		return null;
-	}
-}
 
-/*
- * ===================== ABSTRACTION =====================
- * The Booking class abstracts the concept of a flight booking.
- * It hides internal booking details such as ID generation
- * and status rules from other classes.
- *
- * ===================== ENCAPSULATION =====================
- * - All booking details are private
- * - Status can only be changed through business rules
- *
- * ===================== INHERITANCE =====================
- * - Implements Serializable for file storage
- *
- * ===================== POLYMORPHISM =====================
- * - Booking objects are treated as Serializable
- *   when saved to a file.
- * - Date comparison behavior depends on runtime values.
- */
+    // abstraction
+    public abstract String getSeatClass();
+}
